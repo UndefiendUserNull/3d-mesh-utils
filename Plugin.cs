@@ -8,10 +8,12 @@ namespace EIODE.Addons;
 public partial class Plugin : EditorPlugin
 {
     private Control _dock;
+    public const string MESH_UTILS_MAIN_DOCK_SCENE = "res://addons/3d-mesh-utils/MainDock.tscn";
+
 
     public override void _EnterTree()
     {
-        _dock = ResourceLoader.Load<PackedScene>(ScenesHash.MESH_UTILS_MAIN_DOCK_SCENE).Instantiate<Control>();
+        _dock = ResourceLoader.Load<PackedScene>(MESH_UTILS_MAIN_DOCK_SCENE).Instantiate<Control>();
         AddControlToDock(DockSlot.LeftUr, _dock);
     }
 
