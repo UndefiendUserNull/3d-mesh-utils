@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://df6jcxgpy8a0m"]
+
+[ext_resource type="Script" uid="uid://bm4rbn0acjfcy" path="res://addons/3d-mesh-utils/MainDock.cs" id="1_75q1u"]
+[ext_resource type="PackedScene" uid="uid://dlpt2lwttqu1d" path="res://addons/3d-mesh-utils/Scenes/change_all_textures.tscn" id="2_wj06h"]
+
+[node name="MainDock" type="Control" node_paths=PackedStringArray("button_changeAllTextures")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_75q1u")
+button_changeAllTextures = NodePath("VBoxContainer/change_all")
+_changeAllTexturesScene = ExtResource("2_wj06h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="change_all" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Change All Current Scene Textures"

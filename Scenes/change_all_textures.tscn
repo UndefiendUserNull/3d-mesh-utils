@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlpt2lwttqu1d"]
+
+[ext_resource type="Texture2D" uid="uid://bqhxgmhu8kxb3" path="res://App/Icon.png" id="1_4f6v6"]
+[ext_resource type="Script" uid="uid://cph1qlp2rxc66" path="res://addons/3d-mesh-utils/Scenes/ChangeAllMeshInstanceMaterial.cs" id="1_gsnnd"]
+
+[node name="ChangeAllTextures" type="Control" node_paths=PackedStringArray("changeButton", "confirm", "textureRect", "fileDialog")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gsnnd")
+changeButton = NodePath("PanelContainer/select")
+confirm = NodePath("confirm")
+textureRect = NodePath("PanelContainer/TextureRect")
+fileDialog = NodePath("FileDialog")
+
+[node name="confirm" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -82.0
+offset_right = 63.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "Confirm"
+
+[node name="PanelContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -277.5
+offset_right = 256.0
+offset_bottom = 277.5
+grow_horizontal = 2
+grow_vertical = 2
+drag_area_margin_begin = 1
+drag_area_margin_end = 1
+drag_area_offset = 1
+drag_area_highlight_in_editor = true
+
+[node name="select" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "Select a texture"
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("1_4f6v6")
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a File"
+initial_position = 1
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+file_mode = 0
+filters = PackedStringArray("*.tres")
