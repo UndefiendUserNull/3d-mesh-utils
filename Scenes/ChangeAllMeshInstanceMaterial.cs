@@ -24,6 +24,7 @@ public partial class ChangeAllMeshInstanceMaterial : Control
         changeButton.Pressed += ChangeButton_Pressed;
         confirm.Pressed += Confirm_Pressed;
         fileDialog.FileSelected += FileDialog_FileSelected;
+
     }
     public override void _ExitTree()
     {

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bm4rbn0acjfcy" path="res://addons/3d-mesh-utils/MainDock.cs" id="1_75q1u"]
 [ext_resource type="PackedScene" uid="uid://dlpt2lwttqu1d" path="res://addons/3d-mesh-utils/Scenes/change_all_textures.tscn" id="2_wj06h"]
 
-[node name="MainDock" type="Control" node_paths=PackedStringArray("button_changeAllTextures")]
+[node name="Mesh Utils" type="Control" node_paths=PackedStringArray("button_changeAllTextures")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
